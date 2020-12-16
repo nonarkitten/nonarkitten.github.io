@@ -5,7 +5,7 @@ title: Welcome to my github blog!
 
 Alright, looks like I'm all set up! Welcome to my new blog! I'll update this weekly at a minimum focussing on the progress of my various projects including PJIT and the Buffy Acellerator. What is PJIT and Buffy you may ask? Glad you asked.
 
-![The Buffer Acellerator](https://github.com/nonarkitten/nonarkitten.github.io/blob/master/images/Buffy.png)
+![The Buffer Acellerator](https://github.com/nonarkitten/nonarkitten.github.io/blob/master/images/Buffy.png?raw=true)
 
 **The Buffy Acellerator**, so named because of it's Vampire killing abiilty, is a zero-FPGA, zero-CPLD, pure-CPU accelerator for the Amiga Computer. It is designed to fit inline with a 64 DIP socket and should be compatible with the Amiga 500, 1000, 2000 and CDTV. It's based on the amazing Octave AM335x System-in-Package which hosts a 1GHz ARM Cortex A8 processor (about 2000 MIPS), 512MB or 1GB of DDR3 memory as well as various peripherals. It runs PJIT from a small eXecute-in-Place (XiP) Flash ROM and is not designed to run and general purpose operating system itself.
 
