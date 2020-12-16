@@ -7,9 +7,9 @@ Alright, looks like I'm all set up! Welcome to my new blog! I'll update this wee
 
 ![The Buffer Acellerator](https://github.com/nonarkitten/nonarkitten.github.io/blob/master/images/Buffy.png?raw=true)
 
-**The Buffy Acellerator**, so named because of it's Vampire killing abiilty, is a zero-FPGA, zero-CPLD, pure-CPU accelerator for the Amiga Computer. It is designed to fit inline with a 64 DIP socket and should be compatible with the Amiga 500, 1000, 2000 and CDTV. It's based on the amazing Octave AM335x System-in-Package which hosts a 1GHz ARM Cortex A8 processor (about 2000 MIPS), 512MB or 1GB of DDR3 memory as well as various peripherals. It runs PJIT from a small eXecute-in-Place (XiP) Flash ROM and is not designed to run and general purpose operating system itself.
+**The Buffy Acellerator**, so named because of it's Vampire killing abiilty, is a zero-FPGA, zero-CPLD, pure-CPU accelerator for the Amiga Computer. It is designed to fit inline with a 64 DIP socket and should be compatible with the Amiga 500, 1000, 2000 and CDTV. It's based on the amazing Octavo OSD335x System-in-Package which hosts a 1GHz ARM Cortex-A8 processor (about 2000 MIPS), 512MB or 1GB of DDR3 memory as well as various peripherals. It runs PJIT from a small eXecute-in-Place (XiP) Flash ROM and is not designed to run and general purpose operating system itself.
 
-The big reason I chose this processor is because it has the General Purpose Memory Controller which allows it to **DIRECTLY** interface with any asynchronous bus (like the 68000's), and has dual realtime controllers which can offload the various bus control signals used by the 68000. This permits the CPU to focus on instruction execution alone.
+The big reason I chose this processor is because it has the General Purpose Memory Controller (GPMC) which allows it to **DIRECTLY** interface with any asynchronous bus (like the 68000's), and has dual realtime controllers which can offload the various additional bus control signals used by the 68000. This permits the CPU to focus on instruction execution alone.
 
 The work-in-progress design of the board may be found over at [Open Source Hardware Lab](https://oshwlab.com/Renee/buffy2).
 
