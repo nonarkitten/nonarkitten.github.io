@@ -5,7 +5,7 @@ Well, of course I think so and here's why.
 ## What is Emu68
 
 Emu68 is the very excellent bare-metal (meaning that it runs without the benefit of any operating system)
-traditional JIT developed by (Michal Schulz)[https://github.com/michalsc/Emu68]
+traditional JIT developed by [Michal Schulz](https://github.com/michalsc/Emu68)
 and already shows some very credible benchmark scores and is a reasonably complete at this point. As with all
 traditional JIT compilers, Emu68 takes the 'entry point' (where code is starting) and translates every 68000
 opcode into ARM instructions up to some end point (usually a branch).
