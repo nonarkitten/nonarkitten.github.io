@@ -49,5 +49,5 @@ PJIT is tiny in comparison; in fact, the core logic consists of only a few dozen
 is handled at compile-time, not run-time. All the corner cases are handled; we're no worse than an interpreter already (and may be quite a bit faster) and we're
 approaching peak performance of "ideal" JIT code when acounting for jitter.
 
-What we end up with is a processor that's **smoother** in operation and more like a real 68000 processor. It's also a completely new way of doing JIT, and that alone 
+What we end up with is a processor that's **smoother** in operation and more like a real 68000. It's also a completely new way of doing JIT, and that alone 
 is a good enough reason for me, even if we're never as fast as Emu68.
