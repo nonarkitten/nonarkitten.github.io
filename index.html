@@ -15,13 +15,21 @@ layout: default
     background-attachment: fixed;
     background-position: center; 
     background-size: cover;    
+    opacity: 1; /* set the initial opacity to fully visible */
+    transition: opacity 0.3s ease-in-out; /* add a transition effect */
   }
+  
+  #splash.fade-out {
+    opacity: 0; /* set the opacity to fully transparent */
+  }
+  
   @font-face {
     font-family: 'GeosansLight';
     font-style: normal;
     font-weight: normal;
     src: local('GeosansLight'), url('GeosansLight.woff') format('woff');
   }
+  
   .logo {
     font-family: 'GeosansLight';
     font-weight: normal;
@@ -53,7 +61,8 @@ layout: default
   const randomIndex = Math.floor(Math.random() * messages.length);
   document.getElementById("slogan").innerHTML = messages[randomIndex];
   document.getElementById("splash").addEventListener("click", function() {
-    this.style.display = "none";
+    this.classList.add("fade-out"); /* add the "fade-out" class */
+    setTimeout(() => this.style.display = "none", 500); /* hide the div after the transition is complete */
   });  
 </script>
 
