@@ -50,6 +50,8 @@ layout: default
 </div>
 
 <script>
+  const splash = document.getElementById("splash");
+  const splashDismissed = localStorage.getItem("splashDismissed");  
   const messages = [
     'Your 68k Has Insufficient Cats', 
     'All Your 68k Are Belong to Us', 
@@ -59,10 +61,24 @@ layout: default
     '68k the Next Generation'
   ];
   const randomIndex = Math.floor(Math.random() * messages.length);
+  
+  if (!splashDismissed) {
+    // show the splash page if it hasn't been dismissed
+    splash.style.display = "block";
+  }  
+  
   document.getElementById("slogan").innerHTML = messages[randomIndex];
+  
   document.getElementById("splash").addEventListener("click", function() {
-    this.classList.add("fade-out"); /* add the "fade-out" class */
-    setTimeout(() => this.style.display = "none", 500); /* hide the div after the transition is complete */
+    /* add the "fade-out" class */
+    this.classList.add("fade-out");
+    /* hide the div after the transition is complete */
+    setTimeout(() => {
+      this.style.display = "none";
+      /* set the flag to indicate the splash page has been dismissed */
+      localStorage.setItem("splashDismissed", true); 
+    }, 500); 
+      
   });  
 </script>
 
