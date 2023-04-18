@@ -4,26 +4,24 @@ title: About
 permalink: /about/
 ---
 
-[Reverie](https://github.com/amitmerchant1990/reverie) is a Jekyll theme which is simple and opinionated. It's actually a fork of [jekyll-now](https://github.com/barryclark/jekyll-now) with some additional features and personal touches which I've implemented to suit my needs for [my blog](https://www.amitmerchant.com).
+The Buffee Accelerator Project is the brainchild of Renee Cousins and Tim Wacker; started in the fall of 2019, it was originally conceived as the ultimate 68000 accelerator to actually deliver on the promises made by the Vampire accelerator released a few years ago. Disappointed by it's direction and lack of any performance improvments, we named the project "Buffy" for obvious reasons. This was recently renamed to Buffee to avoid any intellectual property disputes; but we'll do our best to keep our tongues firmly in-cheek.
 
-This is a plug-and-play Jekyll theme which you can use on GitHub Pages without even setting up a local environment.
+### Contact Us
 
-## Features
+[Renee Cousins](mailto:renee.cousins@buffee.ca)
 
-- Command-line free fork-first workflow, using GitHub.com to create, customize and post to your blog
-- Fully responsive and mobile optimized base theme
-- Sass/Coffeescript support using Jekyll 2.0
-- Free hosting on your GitHub Pages user site
-- All the SEO goodies comes in-built
-- Markdown blogging
-- Syntax highlighting using Pygments
-    - [Dracula syntax theme](https://draculatheme.com/) included
-- Disqus commenting
-- Google Analytics integration
-- Fuzzy search across blog posts
-- Pagination of posts works out-of-the-box.
-- Categorize posts out-of-the box
-- RSS Feed
-- In-built sitemap
+[Tim Wacker](mailto:tim.wacker@buffee.ca)
 
-Learn more about it [here](https://github.com/amitmerchant1990/reverie) on how to get started.
+### Links
+
+[Buffee Firmware PJIT](https://github.com/nonarkitten/pseudo-jit)
+
+~~[Buffee Hardware](https://oshwlab.com/Renee/buffee-accelerator)~~
+(Removed due to abuse)
+
+### Thanks To
+
+[Icons by Icons8](https://iconscout.com/contributors/icons8)
+
+[Github Pages Blog Template by Amit Merchant](https://github.com/amitmerchant1990/reverie)
+
