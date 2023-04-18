@@ -10,7 +10,13 @@ So the following is a pedagogical example of a direct-threaded interpreter.
 #define NEXT goto **ip++
 
 int main(void) {
-  static void  *prog[] = {&&next1,&&next2,&&next1,&&next3,&&next1,&&next4,&&next1,&&next5,&&next1,&&loop};
+  static void  *prog[] = {
+    &&next1,&&next2,
+    &&next1,&&next3,
+    &&next1,&&next4,
+    &&next1,&&next5,
+    &&next1,&&loop
+  };
   void **ip=prog;
   int    count = 100000000;
   NEXT;
@@ -73,7 +79,8 @@ uint32_t* cache_find_entry(uint32_t m68k_addr) {
     uint32_t off = ((m68k_addr >> 1) & ((1 << BLOCKLEN) - 1));
 
     if ((*cache_tags)[idx] != tag) { // MISS!
-        __cache_clear(&(*cache_data)[idx][0], &(*cache_data)[idx][(1 << BLOCKLEN) - 2]);
+        __cache_clear(&(*cache_data)[idx][0],
+          &(*cache_data)[idx][(1 << BLOCKLEN) - 2]);
         (*cache_tags)[idx] = tag;
     }
     return &(*cache_data)[idx][off];
