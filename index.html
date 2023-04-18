@@ -16,12 +16,27 @@ layout: default
     background-position: center; 
     background-size: cover;    
   }
+  @font-face {
+    font-family: 'GeosansLight';
+    font-style: normal;
+    font-weight: normal;
+    src: local('GeosansLight'), url('GeosansLight.woff') format('woff');
+  }
+  .logo {
+    font-family: 'GeosansLight';
+    font-weight: normal;
+    font-size: 30px;
+    color: #FFEB5C;
+    margin: 0px auto;
+  }   
 </style>
 
 <div id="splash">
     <center>
-      <img src="/images/Buffee_Cat.png" width="256"/>
-      <br/><span id="slogan"/>
+      <div class="logo">
+        <img src="/images/Buffee_Cat.png" width="256"/>
+        <br/><span id="slogan"/>
+      </div>
     </center>
 </div>
 
