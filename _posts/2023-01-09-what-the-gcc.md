@@ -1,6 +1,7 @@
 ---
 layout: post
 title: What the GCC?
+comments: true
 ---
 
 Happy New Year! With a new year comes new revelations and wow do I have a doozy -- ARM GCC is just completely broken. I'm not saying it doesn't produce working code but there are cases where it produces obscenely poor performing code.
