@@ -36,7 +36,7 @@ int main(void) {
 }
 ```
 When compiled with -Os, this produces abysmal code. What you're seeing here is the code for each next# statement which is MOSTLY the NEXT statement. This is loading the address to jump to into register R2, branching to .L2 which then copies R2 into the program counter PC. Okay.
-```
+```armasm
 .L2
         mov     pc, r2    @ indirect register jump
 .Lnext1:
@@ -48,7 +48,7 @@ When compiled with -Os, this produces abysmal code. What you're seeing here is t
         ...
 ```
 Well, if we compile it with -O3 which should produce faster code and shouldn't produce smaller code, we instead see this:
-```
+```armasm
 .Lnext1:
         ldr     r2, [r3], #4
         mov     pc, r2    @ indirect register jump
@@ -58,7 +58,7 @@ Well, if we compile it with -O3 which should produce faster code and shouldn't p
         ...
 ```
 See that? We lost a completely useless branch and the code is smaller. But we're not done. While there is NO compiler option that will improve this further, this is what we SHOULD see with either -Os or -O3:
-```
+```armasm
 .Lnext1:
         ldr     pc, [r3], #4   @ indirect register jump
 .Lnext2:
@@ -88,7 +88,7 @@ uint32_t* cache_find_entry(uint32_t m68k_addr) {
 }
 ```
 Simple enough, right? Well, GCC in it's infinte wisdom basically rolls that return statement into either code path and assembles them both. That is, the end of the function looks like this:
-```
+```armasm
         ...
         add     ip, ip, r6
         strh    r5, [ip, #-255] @ movhi
@@ -105,7 +105,7 @@ Simple enough, right? Well, GCC in it's infinte wisdom basically rolls that retu
         bx      lr
 ```
 Like seriously? This should be four instructions shorter as there is NO performance gain from poping five registers versus popping four then performing BX LR.
-```
+```armasm
         ...
         add     ip, ip, r6
         strh    r5, [ip, #-255] @ movhi
